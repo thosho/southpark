@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Southfork Restaurant - Authentic Canadian Cuisine</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Language Toggle -->
+    <div class="lang-toggle">
+        <button onclick="switchLanguage('en')" id="lang-en" class="active">EN</button>
+        <button onclick="switchLanguage('fr')" id="lang-fr">FR</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-utensils"></i>
+                    <span>Southfork</span>
+                </a>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#home" data-en="Home" data-fr="Accueil">Home</a></li>
+                    <li><a href="#about" data-en="About" data-fr="À Propos">About</a></li>
+                    <li><a href="#menu" data-en="Menu" data-fr="Menu">Menu</a></li>
+                    <li><a href="#reserve" data-en="Reserve" data-fr="Réserver">Reserve</a></li>
+                    <li><a href="#contact" data-en="Contact" data-fr="Contact">Contact</a></li>
+                    <li><a href="#" onclick="openOrderModal()" class="btn-order" data-en="Order Online" data-fr="Commander en Ligne">Order Online</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 data-en="Welcome to Southfork Restaurant" data-fr="Bienvenue au Restaurant Southfork">Welcome to Southfork Restaurant</h1>
+            <p data-en="Experience authentic Canadian cuisine in the heart of High River, Alberta" data-fr="Découvrez la cuisine canadienne authentique au cœur de High River, Alberta">Experience authentic Canadian cuisine in the heart of High River, Alberta</p>
+            <div class="hero-buttons">
+                <a href="#reserve" class="btn btn-primary" data-en="Reserve a Table" data-fr="Réserver une Table">Reserve a Table</a>
+                <a href="#menu" class="btn btn-secondary" data-en="View Menu" data-fr="Voir le Menu">View Menu</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-clock"></i>
+                    <h3 data-en="Open Daily" data-fr="Ouvert Tous les Jours">Open Daily</h3>
+                    <p data-en="8:00 AM - 10:00 PM" data-fr="8h00 - 22h00">8:00 AM - 10:00 PM</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3 data-en="Location" data-fr="Emplacement">Location</h3>
+                    <p data-en="High River, Alberta" data-fr="High River, Alberta">High River, Alberta</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-phone"></i>
+                    <h3 data-en="Call Us" data-fr="Appelez-nous">Call Us</h3>
+                    <p>(403) 652-2233</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shopping-bag"></i>
+                    <h3 data-en="Takeout" data-fr="À Emporter">Takeout</h3>
+                    <p data-en="Available" data-fr="Disponible">Available</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800" alt="Restaurant Interior">
+                </div>
+                <div class="about-content">
+                    <h2 data-en="About Southfork" data-fr="À Propos de Southfork">About Southfork</h2>
+                    <p data-en="Welcome to the heart of Canadian cuisine, where tradition meets innovation. Our menu celebrates the best of Canada with hearty dishes and local flavors." data-fr="Bienvenue au cœur de la cuisine canadienne, où la tradition rencontre l'innovation. Notre menu célèbre le meilleur du Canada avec des plats copieux et des saveurs locales.">Welcome to the heart of Canadian cuisine, where tradition meets innovation. Our menu celebrates the best of Canada with hearty dishes and local flavors.</p>
+                    <p data-en="Bring your friends and family to experience a delicious, authentic Canadian feast! Southfork Restaurant is a place for everyone." data-fr="Amenez vos amis et votre famille pour découvrir un délicieux festin canadien authentique! Le Restaurant Southfork est un endroit pour tous.">Bring your friends and family to experience a delicious, authentic Canadian feast! Southfork Restaurant is a place for everyone.</p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span data-en="Fresh Local Ingredients" data-fr="Ingrédients Locaux Frais">Fresh Local Ingredients</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span data-en="Authentic Canadian Recipes" data-fr="Recettes Canadiennes Authentiques">Authentic Canadian Recipes</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span data-en="Family-Friendly Atmosphere" data-fr="Atmosphère Familiale">Family-Friendly Atmosphere</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu-section" id="menu">
+        <div class="container">
+            <h2 class="section-title" data-en="Our Menu" data-fr="Notre Menu">Our Menu</h2>
+            <p class="section-subtitle" data-en="Explore our delicious offerings" data-fr="Découvrez nos délicieuses offres">Explore our delicious offerings</p>
+
+            <div class="menu-categories">
+                <button class="category-btn active" onclick="filterMenu('all')" data-en="All" data-fr="Tout">All</button>
+                <button class="category-btn" onclick="filterMenu('breakfast')" data-en="Breakfast" data-fr="Petit-déjeuner">Breakfast</button>
+                <button class="category-btn" onclick="filterMenu('burgers')" data-en="Burgers" data-fr="Burgers">Burgers</button>
+                <button class="category-btn" onclick="filterMenu('mains')" data-en="Mains" data-fr="Plats Principaux">Mains</button>
+                <button class="category-btn" onclick="filterMenu('pasta')" data-en="Pasta & Salads" data-fr="Pâtes et Salades">Pasta & Salads</button>
+                <button class="category-btn" onclick="filterMenu('appetizers')" data-en="Appetizers" data-fr="Entrées">Appetizers</button>
+            </div>
+
+            <div class="menu-grid" id="menu-grid">
+                <!-- Menu items will be dynamically loaded -->
+            </div>
+
+            <div class="menu-cta">
+                <button class="btn btn-primary" onclick="openOrderModal()" data-en="Order Now" data-fr="Commander Maintenant">Order Now</button>
+                <a href="menu-full.html" class="btn btn-secondary" data-en="View Full Menu" data-fr="Voir le Menu Complet">View Full Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section class="reservation" id="reserve">
+        <div class="container">
+            <h2 class="section-title" data-en="Reserve a Table" data-fr="Réserver une Table">Reserve a Table</h2>
+            <p class="section-subtitle" data-en="Book your dining experience" data-fr="Réservez votre expérience culinaire">Book your dining experience</p>
+
+            <div class="reservation-form-wrapper">
+                <form id="reservation-form" class="reservation-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label data-en="Name" data-fr="Nom">Name</label>
+                            <input type="text" id="res-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label data-en="Email" data-fr="Email">Email</label>
+                            <input type="email" id="res-email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label data-en="Phone" data-fr="Téléphone">Phone</label>
+                            <input type="tel" id="res-phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label data-en="Number of Guests" data-fr="Nombre d'invités">Number of Guests</label>
+                            <select id="res-guests" required>
+                                <option value="">Select</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8+</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label data-en="Date" data-fr="Date">Date</label>
+                            <input type="date" id="res-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label data-en="Time" data-fr="Heure">Time</label>
+                            <input type="time" id="res-time" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label data-en="Special Requests" data-fr="Demandes Spéciales">Special Requests</label>
+                        <textarea id="res-notes" rows="3"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" data-en="Confirm Reservation" data-fr="Confirmer la Réservation">Confirm Reservation</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title" data-en="Contact Us" data-fr="Contactez-nous">Contact Us</h2>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3 data-en="Address" data-fr="Adresse">Address</h3>
+                            <p>High River, Alberta, Canada</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3 data-en="Phone" data-fr="Téléphone">Phone</h3>
+                            <p>(403) 652-2233</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3 data-en="Email" data-fr="Email">Email</h3>
+                            <p>info@southforkrestaurant.ca</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3 data-en="Hours" data-fr="Horaires">Hours</h3>
+                            <p data-en="Mon-Sun: 8:00 AM - 10:00 PM" data-fr="Lun-Dim: 8h00 - 22h00">Mon-Sun: 8:00 AM - 10:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name / Votre Nom" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email / Votre Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="5" placeholder="Your Message / Votre Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" data-en="Send Message" data-fr="Envoyer le Message">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Southfork Restaurant</h3>
+                    <p data-en="Authentic Canadian cuisine in the heart of High River, Alberta." data-fr="Cuisine canadienne authentique au cœur de High River, Alberta.">Authentic Canadian cuisine in the heart of High River, Alberta.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 data-en="Quick Links" data-fr="Liens Rapides">Quick Links</h4>
+                    <ul>
+                        <li><a href="#home" data-en="Home" data-fr="Accueil">Home</a></li>
+                        <li><a href="#about" data-en="About" data-fr="À Propos">About</a></li>
+                        <li><a href="#menu" data-en="Menu" data-fr="Menu">Menu</a></li>
+                        <li><a href="#reserve" data-en="Reserve" data-fr="Réserver">Reserve</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 data-en="Contact" data-fr="Contact">Contact</h4>
+                    <ul>
+                        <li>High River, Alberta</li>
+                        <li>(403) 652-2233</li>
+                        <li>info@southforkrestaurant.ca</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Southfork Restaurant. <span data-en="All rights reserved." data-fr="Tous droits réservés.">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Order Modal -->
+    <div id="order-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeOrderModal()">&times;</span>
+            <h2 data-en="Order Online" data-fr="Commander en Ligne">Order Online</h2>
+
+            <div class="order-categories">
+                <button class="order-category-btn active" onclick="filterOrderMenu('all')" data-en="All Items" data-fr="Tous les Articles">All Items</button>
+                <button class="order-category-btn" onclick="filterOrderMenu('breakfast')" data-en="Breakfast" data-fr="Petit-déjeuner">Breakfast</button>
+                <button class="order-category-btn" onclick="filterOrderMenu('burgers')" data-en="Burgers" data-fr="Burgers">Burgers</button>
+                <button class="order-category-btn" onclick="filterOrderMenu('mains')" data-en="Mains" data-fr="Plats">Mains</button>
+            </div>
+
+            <div id="order-items" class="order-items"></div>
+
+            <div class="order-summary">
+                <h3 data-en="Your Order" data-fr="Votre Commande">Your Order</h3>
+                <div id="cart-items"></div>
+                <div class="order-total">
+                    <span data-en="Total:" data-fr="Total:">Total:</span>
+                    <span id="cart-total">$0.00</span>
+                </div>
+                <button class="btn btn-primary" onclick="submitOrder()" data-en="Submit Order" data-fr="Soumettre la Commande">Submit Order</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
